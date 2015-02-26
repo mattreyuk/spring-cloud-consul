@@ -6,6 +6,7 @@ import org.springframework.cloud.client.discovery.AbstractDiscoveryLifecycle;
 import org.springframework.cloud.consul.ConsulProperties;
 import org.springframework.cloud.consul.client.AgentClient;
 import org.springframework.cloud.consul.model.Service;
+import org.springframework.cloud.consul.model.Check;
 
 /**
  * @author Spencer Gibb
@@ -30,7 +31,11 @@ public class ConsulLifecycle extends AbstractDiscoveryLifecycle {
         service.setPort(port);
         service.setTags(consulProperties.getTags());
 
-        //TODO: add support for Check
+        //simple check using default spring boot management 
+        Check check = new Check();
+        check.setHttp("http://localhost:"+port+"/health");
+        check.setInterval("10s");
+        service.setCheck(check);
         register(service);
     }
 

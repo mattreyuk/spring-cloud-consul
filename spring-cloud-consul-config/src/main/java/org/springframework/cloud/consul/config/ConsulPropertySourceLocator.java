@@ -1,7 +1,7 @@
 package org.springframework.cloud.consul.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.config.client.PropertySourceLocator;
+import org.springframework.cloud.configure.client.PropertySourceLocator;
 import org.springframework.cloud.consul.ConsulProperties;
 import org.springframework.cloud.consul.client.KeyValueClient;
 import org.springframework.core.env.*;

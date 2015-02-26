@@ -8,11 +8,14 @@ import lombok.Data;
  */
 @Data
 public class Check {
-    @JsonProperty("Script")
+    @JsonProperty("script")
     private String script;
+    
+    @JsonProperty("http")
+    private String http;
 
     @JsonProperty("Interval")
-    private int interval;
+    private String interval;
 
     @JsonProperty("TTL")
     private int ttl;
