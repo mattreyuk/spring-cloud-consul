@@ -1,7 +1,7 @@
 package org.springframework.cloud.consul.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.configure.client.ConfigClientProperties;
+import org.springframework.cloud.config.client.ConfigClientProperties;
 import org.springframework.cloud.consul.ConsulAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
